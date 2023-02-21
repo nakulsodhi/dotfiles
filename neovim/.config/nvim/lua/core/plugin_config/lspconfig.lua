@@ -14,5 +14,3 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
   end
-
-require("lspconfig").sumneko_lua.setup {}
