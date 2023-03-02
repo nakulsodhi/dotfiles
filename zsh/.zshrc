@@ -7,7 +7,7 @@ bindkey -v
 (cat ~/.cache/wal/sequences &)
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/nakul2/.zshrc'
+zstyle :compinstall filename '/home/nakul/.zshrc'
 set -o PROMPT_SUBST
 PS1="[%/]~ $ "
 autoload -Uz compinit
