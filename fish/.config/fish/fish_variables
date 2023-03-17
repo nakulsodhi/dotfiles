@@ -27,6 +27,10 @@ SETUVAR fish_color_selection:\x2d\x2dreverse
 SETUVAR fish_color_status:brred
 SETUVAR fish_color_user:normal
 SETUVAR fish_color_valid_path:\x1d
+<<<<<<< HEAD
+=======
+SETUVAR fish_greeting:
+>>>>>>> 8e91809 (First Commit)
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_background:\x1d
 SETUVAR fish_pager_color_completion:normal

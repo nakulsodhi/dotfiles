@@ -25,7 +25,16 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 
 
+<<<<<<< HEAD
 
+=======
+local filename = function()
+  return f(function(_args, snip)
+    local name = vim.split(snip.snippet.env.TM_FILENAME, ".", true)
+    return name[1] or ""
+  end)
+end
+>>>>>>> 8e91809 (First Commit)
 
 
 ls.add_snippets("tex",
@@ -33,6 +42,7 @@ ls.add_snippets("tex",
 
 --TODO:rewrite using fmt 
     s("quickstart", {
+<<<<<<< HEAD
         t({"%! TeX root = main.tex","","\\documentclass{article}","", "\\usepackage{amsmath,inputenc,graphicx}",""}),
         t("\\title{"),
         i(1,"title"),
@@ -43,4 +53,19 @@ ls.add_snippets("tex",
         t({"","\\end{document}"})
 
     })
+=======
+        t({"%! TeX root ="}),
+        i(1,"filename"),
+        t({"","\\documentclass{article}","", "\\usepackage{amsmath,inputenc,graphicx}",""}),
+        t("\\title{"),
+        i(2,"title"),
+        t({"}",""}),
+        t({"\\author{Nakul Sodhi}",""}),
+        t({"\\begin{document}","","\\maketitle",""}),
+        i(3),
+        t({"","\\end{document}"})
+
+    }),
+
+>>>>>>> 8e91809 (First Commit)
 })

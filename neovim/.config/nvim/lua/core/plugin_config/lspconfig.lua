@@ -1,6 +1,10 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
+<<<<<<< HEAD
     ensure_installed = { "jdtls", "lua_ls", "pylsp"}
+=======
+    ensure_installed = { "pylsp"}
+>>>>>>> 8e91809 (First Commit)
     
 
      }
