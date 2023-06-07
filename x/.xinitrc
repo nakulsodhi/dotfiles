@@ -1,8 +1,9 @@
-[[ -f ~/.cache/wal/colors.Xresources]] && xrdb -merge -I$HOME ~/.cache/wal/colors.Xresources
+#[[ -f ~/.cache/wal/colors.Xresources]] && xrdb -merge -I$HOME ~/.cache/wal/colors.Xresources
 picom &
+dunst &
 wal -R
 xrdb -merge ~/.cache/wal/colors.Xresources
 dwmblocks &
 wmname "LG3D" &
-onedrivemount &
+setup_wacom.sh &
 exec dwm 

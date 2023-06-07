@@ -69,3 +69,17 @@ ls.add_snippets("tex",
 
 >>>>>>> 8e91809 (First Commit)
 })
+
+
+ls.add_snippets("eml",{
+    s("n", 
+    fmt(
+    [[
+    <p>
+    {}
+    </p>
+    ]],
+    {i(1)},
+    { delimiters = "{}" }
+    ))
+})

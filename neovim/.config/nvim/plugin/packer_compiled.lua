@@ -90,10 +90,20 @@ _G.packer_plugins = {
     url = "https://github.com/romgrk/barbar.nvim",
     wants = { "nvim-web-devicons" }
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/nakul/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/nakul/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/nakul/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,

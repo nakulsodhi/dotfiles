@@ -29,6 +29,8 @@ return require('packer').startup(function(use)
   "neovim/nvim-lspconfig",
   }
   use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-nvim-lsp"
   use {'romgrk/barbar.nvim' , wants = 'nvim-web-devicons' } --tabline plugin (wierd name)
   use({

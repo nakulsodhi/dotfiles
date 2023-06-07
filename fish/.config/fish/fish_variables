@@ -30,8 +30,12 @@ SETUVAR fish_color_valid_path:\x1d
 <<<<<<< HEAD
 =======
 SETUVAR fish_greeting:
+<<<<<<< HEAD
 >>>>>>> 8e91809 (First Commit)
 SETUVAR fish_key_bindings:fish_default_key_bindings
+=======
+SETUVAR fish_key_bindings:fish_vi_key_bindings
+>>>>>>> b3f07e6 (Improved the nvim autocomplete config by: 1) Fixing overlapping keybinds 2) Adding the buffer and path as possible autocomplete sources)
 SETUVAR fish_pager_color_background:\x1d
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:brblack
