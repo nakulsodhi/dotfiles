@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 #path variables
-set PATH $PATH ~/.local/bin
+set PATH $PATH ~/.local/bin /opt/texlive/2023/bin/x86_64-linux/ /opt/sratoolkit.3.0.5-ubuntu64/bin/
 
 #autostart
 if status is-login
@@ -12,3 +12,4 @@ if status is-login
     end
 end
 
+starship init fish | source
