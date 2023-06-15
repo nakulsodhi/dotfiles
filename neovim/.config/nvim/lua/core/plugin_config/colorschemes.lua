@@ -1,2 +1,2 @@
 vim.o.termguicolors = true
-vim.cmd [[colorscheme carbonfox]]
+vim.cmd [[colorscheme kanagawa-wave]]

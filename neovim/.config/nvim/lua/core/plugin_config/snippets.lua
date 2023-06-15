@@ -44,3 +44,43 @@ ls.add_snippets("tex",
 
     })
 })
+
+ls.add_snippets("python",
+{
+    s({trig="doc_scr",dscr="Docstring template for script"}, fmt(
+   [[ """
+    PURPOSE: <>
+    AUTHOR: <>
+    DATE: <> 
+    PARAMETERS: <>
+    COMMENTS: <>
+    """   ]],
+    {i(1),i(2),i(3),i(4),i(5)},
+    {delimiters = "<>"}
+    )
+
+    )}
+)
+
+ls.add_snippets("mail", {
+    s({trig="para", dscr="new paragraph"},fmt(
+    [[
+    <p>
+    {}<br>
+    </p>
+    ]], {i(1,"Type Here")}, {delimiters="{}"}
+    )
+    )
+})
+
+ls.add_snippets("mail", {
+    s({trig="newline", dscr="new line"},fmt(
+    [[
+    <br>
+    {}
+    ]], {i(1,"Type Here")}, {delimiters="{}"}
+    )
+    )
+})
+
+

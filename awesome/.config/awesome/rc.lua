@@ -116,3 +116,5 @@ require("deco.titlebar")
 
 --Autostart Applications
 awful.spawn.with_shell("wal -R")
+awful.spawn.with_shell("unclutter")
+awful.spawn.with_shell("nm-applet")

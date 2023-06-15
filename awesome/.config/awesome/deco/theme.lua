@@ -14,7 +14,7 @@ local themes_path = gfs.get_themes_dir()
 local theme = dofile(themes_path.."default/theme.lua")
 -- load vector assets' generators for this theme
 
-theme.font          = "CaskaydiaCove Nerd Font Mono"
+theme.font          = "CaskaydiaCove Nerd Font Mono 16"
 
 theme.bg_normal     = xrdb.background
 theme.bg_focus      = xrdb.color12
@@ -27,8 +27,8 @@ theme.fg_focus      = xrdb.color7
 theme.fg_urgent     = theme.bg_normal
 theme.fg_minimize   = theme.bg_normal
 
-theme.useless_gap   = dpi(3)
-theme.border_width  = dpi(2)
+theme.useless_gap   = dpi(10)
+theme.border_width  = dpi(5)
 theme.border_normal = xrdb.color0
 theme.border_focus  = theme.bg_focus
 theme.border_marked = xrdb.color10
@@ -42,7 +42,12 @@ theme.border_marked = xrdb.color10
 -- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
 -- mouse_finder_[color|timeout|animate_timeout|radius|factor]
 -- Example:
---theme.taglist_bg_focus = "#ff0000"
+--the following makes the background for the tasklist transparent
+theme.tasklist_bg_normal = "#ff000000"
+theme.tasklist_bg_focus = "#ff000000"
+--the following sets the text opacity for the inactive windows in the tasklist
+--to 50% to indicate that they are inactive
+theme.tasklist_fg_normal = xrdb.foreground .. "50"
 
 theme.tooltip_fg = theme.fg_normal
 theme.tooltip_bg = theme.bg_normal

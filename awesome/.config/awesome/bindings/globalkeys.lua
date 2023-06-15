@@ -107,7 +107,7 @@ function _M.get()
         {description = "launch firefox", group = "launcher"}),
     awful.key({ modkey }, "BackSpace", function() awful.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu") end,
     {description = "power menu",group = "launcher"}),
-    awful.key({ modkey }, "Print", function() awful.util.spawn_with_shell("snip_and_show.sh") end, 
+    awful.key({ modkey }, "Print", function() awful.util.spawn_with_shell("screensnip.sh") end, 
     { description = "screen snip", group = "screenshot"}),
     awful.key({ }, "Print", function() awful.util.spawn_with_shell(" maim  | tee ~/screenshots/$(date +%F-%H_%M_%S).png | xclip -selection clipboard -t image/png") end, 
     { description = "screenshot", group = "screenshot"}),

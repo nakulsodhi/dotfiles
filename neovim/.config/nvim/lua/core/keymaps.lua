@@ -1,6 +1,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.backspace = '2'
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
@@ -15,7 +16,13 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.opt.undodir = os.getenv("HOME") .. "/.local/nvim/undodir"
+vim.opt.undofile = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.scrolloff = 8
+
+--vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 
 -- vimtex options
