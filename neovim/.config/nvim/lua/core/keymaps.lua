@@ -23,6 +23,9 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 
 --vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.keymap.set('n', '<C-y>', '"+y')
+vim.keymap.set('n', '<C-p>', '"+p')
+vim.keymap.set('n', '<C-P>', '"+P')
 
 
 -- vimtex options

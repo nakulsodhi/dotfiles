@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 #path variables
-set PATH $PATH ~/.local/bin /opt/texlive/2023/bin/x86_64-linux/ 
+set PATH $PATH ~/.local/bin /opt/texlive/2023/bin/x86_64-linux/  ~/.cargo/bin
 
 #autostart
 if status is-login
@@ -13,3 +13,9 @@ if status is-login
 end
 
 starship init fish | source
+alias ls="exa"
+alias cat="bat"
+alias cf="cd ~/.config/"
+alias nvconf="cd ~/.config/nvim"
+alias work="cd ~/work_docs/Nakul/"
+alias wmconf="cd ~/.config/awesome/"

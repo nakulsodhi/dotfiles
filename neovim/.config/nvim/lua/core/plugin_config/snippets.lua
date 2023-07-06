@@ -44,6 +44,12 @@ ls.add_snippets("tex",
 
     })
 })
+ls.add_snippets("tex",
+{
+    s("mono", fmt(
+    "\\texttt{<>}", {i(1,"code")}, {delimiters = "<>"}
+    ))
+})
 
 ls.add_snippets("python",
 {
