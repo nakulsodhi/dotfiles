@@ -31,7 +31,7 @@
   (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
   (add-hook 'org-mode-hook 'org-latex-preview-auto-mode)
   (setq org-habit-show-habits-only-for-today nil)
-  (setq org-agenda-files (directory-files-recursively "~/OneDrive/org-mode/" "\\.org$"))
+  (setq org-agenda-files (directory-files-recursively "~/notes/org-mode/" "\\.org$"))
 (setq org-pretty-entities t)
 (setq org-hide-emphasis-markers t)
 (setq org-startup-folded 'content)
