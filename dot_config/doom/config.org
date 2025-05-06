@@ -1,0 +1,107 @@
+* Resources
+https://tecosaur.github.io/emacs-config/config.html
+https://dotdoom.rgoswami.me/config
+* Doom Keybinds
+Set the leader to spacemacs
+#+begin_src emacs-lisp
+(setq doom-localleader-key ",")
+#+end_src
+* Doom
+There are two ways to load a theme. Both assume the theme is installed and
+available. You can either set `doom-theme' or manually load a theme with the
+`load-theme' function. This is the default:
+
+#+begin_src emacs-lisp
+(setq doom-theme 'modus-vivendi)
+
+#+end_src
+
+This determines the style of line numbers in effect. If set to `nil', line
+numbers are disabled. For relative line numbers, set this to `relative'.
+#+begin_src emacs-lisp
+(setq display-line-numbers-type `relative)
+#+end_src
+* Which Key
+Set the whick key opening delay to  0.5 seconds
+#+begin_src emacs-lisp
+(setq which-key-idle-delay 0.5)
+#+end_src
+
+replace evil- in which-key entries to make em easier to read
+#+begin_src emacs-lisp
+(setq which-key-allow-multiple-replacements t)
+(after! which-key
+  (pushnew!
+   which-key-replacement-alist
+   '(("" . "\\`+?evil[-:]?\\(?:a-\\)?\\(.*\\)") . (nil . "◂\\1"))
+   '(("\\`g s" . "\\`evilem--?motion-\\(.*\\)") . (nil . "◃\\1"))
+   ))
+
+#+end_src
+* Org Mode
+Set the directory
+#+begin_src emacs-lisp
+(setq org-directory "~/notes/org-mode/")
+(setq org-roam-directory "~/notes/org-mode/")
+
+(add-hook 'org-mode-hook 'turn-on-org-cdlatex)
+(add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
+
+ (defun enable-word-processor-minor-modes ()
+    (setq line-spacing 0.15)
+    ;;(pixel-scroll-precision-mode)
+    (smartparens-mode)
+    (visual-line-mode))
+  ;;  (add-hook 'window-size-change-functions 'org-image-resize)
+  (add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
+  ;;(add-hook 'org-mode-hook 'org-appear-mode)
+  (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
+  (add-hook 'org-mode-hook 'org-latex-preview-auto-mode)
+  (setq org-habit-show-habits-only-for-today nil)
+  (setq org-agenda-files (directory-files-recursively "~/OneDrive/org-mode/" "\\.org$"))
+(setq org-pretty-entities t)
+(setq org-hide-emphasis-markers t)
+(setq org-startup-folded 'content)
+(setq org-ellipsis " ") ;; folding symbol
+
+#+end_src
+
+Run buffers in org-mode by default:
+#+begin_src emacs-lisp
+(setq-default major-mode 'org-mode)
+#+end_src
+** Org Keybinds
+
+I want the following keybinds to be added that i've noticed
+The *insert* maps
+The *text* maps
+Comment lines
+ctrl c ctrl c
+copy and clipboard.
+display org roam tags in node search
+Other stuff- daemon mode,
+smartparens equivalency (default +smartparens under doom config is NOT all you need, bind sp-sexp-up to tab)
+** Org Appear
+#+begin_src emacs-lisp
+(setq org-appear-autolinks t)
+(setq org-appear-autoentities t)
+(setq org-appear-autosubmarkers t)
+(setq org-appear-autokeywords t)
+(setq org-appear-inside-latex t)
+
+;; It's cool to have appear only work in insert mode, gonna leave in automatic for now
+;; (setq org-appear-trigger 'manual)
+;; (add-hook 'org-mode-hook (lambda ()
+;;                           (add-hook 'evil-insert-state-entry-hook
+;;                                     #'org-appear-manual-start
+;;                                     nil
+;;                                     t)
+;;                           (add-hook 'evil-insert-state-exit-hook
+;;                                     #'org-appear-manual-stop
+;;                                     nil
+;;                                     t)))
+#+end_src
+* Transparency
+#+begin_src  emacs-lisp
+(set-frame-parameter nil 'alpha-background 0.6)
+#+end_src
