@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if [[ -d $1 ]]; then
+    echo "directory! choosing random wallpaper:"
+    set="$(find "$1" -type f | shuf -n 1)"
+    echo "$set"
+else
+    echo "file!"
+    set="$1"
+fi
+
+swaybg -i "$set"&
+wal -i "$set"
+killall -SIGUSR2 waybar
+#xrdb -merge ~/.cache/wal/colors.Xresources
+#xdotool key "Super_L+F5"
+zathura-pywal

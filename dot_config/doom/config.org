@@ -68,7 +68,7 @@ Set the directory
 ** Org Writeroom
 Setting the variable fonts
 #+begin_src emacs-lisp
-(setq doom-font (font-spec :family "Iosevka Nerd Font Mono")
+(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "Vollkorn"))
 #+end_src
 

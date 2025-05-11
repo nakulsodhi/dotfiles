@@ -1,3 +1,7 @@
+[Added Associations]
+x-scheme-handler/tg=org.telegram.desktop.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop.desktop;
+
 [Default Applications]
 application/x-xpinstall=firefox.desktop
 application/json=firefox.desktop
@@ -41,18 +45,10 @@ text/x-c++hdr=nvim.desktop
 text/x-moc=nvim.desktop
 text/x-tex=nvim.desktop
 application/epub=org.pwmt.zathura-pdf-mupdf.desktop
-application/x-fictionbook+xml=org.pwmt.zathura-pdf-mupdf.desktop
-application/oxps=org.pwmt.zathura-pdf-mupdf.desktop
-application/vnd.comicbook-rar=org.pwmt.zathura-cb.desktop
-application/x-cbt=org.pwmt.zathura-cb.desktop
-application/x-cb7=org.pwmt.zathura-cb.desktop
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/lunarclient=lunarclient.desktop
 x-scheme-handler/discord-562286213059444737=lunarclient.desktop
 x-scheme-handler/tg=org.telegram.desktop.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
-
-[Added Associations]
-x-scheme-handler/tg=org.telegram.desktop.desktop;
-x-scheme-handler/tonsite=org.telegram.desktop.desktop;
+application/pdf=org.pwmt.zathura.desktop
+application/x-fictionbook+xml=org.pwmt.zathura.desktop

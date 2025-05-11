@@ -37,7 +37,7 @@
   (setq org-startup-folded 'content)
   (setq org-ellipsis " ")) ;; folding symbol
 
-(setq doom-font (font-spec :family "Iosevka Nerd Font Mono")
+(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "Vollkorn"))
 
 (setq +zen-text-scale 1)
