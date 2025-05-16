@@ -52,3 +52,4 @@ x-scheme-handler/tg=org.telegram.desktop.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
 application/pdf=org.pwmt.zathura.desktop
 application/x-fictionbook+xml=org.pwmt.zathura.desktop
+x-scheme-handler/discord=vesktop.desktop
