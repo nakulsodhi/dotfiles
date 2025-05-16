@@ -4,6 +4,8 @@
 
 (setq display-line-numbers-type `relative)
 
+(setq evil-shift-round nil)
+
 (setq which-key-idle-delay 0.5)
 
 (setq which-key-allow-multiple-replacements t)
@@ -40,8 +42,10 @@
 (setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "Vollkorn"))
 
-(setq +zen-text-scale 1)
-(setq writeroom-width 0.8)
+(after! org
+  (setq +zen-text-scale 1)
+  (setq writeroom-width 1.8)
+  )
 (add-hook 'org-mode-hook 'writeroom-mode)
 
 (setq-default major-mode 'org-mode)
@@ -68,6 +72,7 @@
 
 (after! org-download
   (setq org-download-method 'directory)
+  (setq org-download-image-dir (concat org-directory ".attach/" ))
   (setq org-download-link-format "[[file:%s]]\n"
         org-download-abbreviate-filename-function #'file-relative-name)
   (setq org-download-link-format-function #'org-download-link-format-function-default)

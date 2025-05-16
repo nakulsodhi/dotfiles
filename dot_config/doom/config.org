@@ -21,6 +21,10 @@ numbers are disabled. For relative line numbers, set this to `relative'.
 #+begin_src emacs-lisp
 (setq display-line-numbers-type `relative)
 #+end_src
+* Evil-mode
+#+begin_src emacs-lisp
+(setq evil-shift-round nil)
+#+end_src
 * Which Key
 Set the whick key opening delay to  0.5 seconds
 #+begin_src emacs-lisp
@@ -73,8 +77,10 @@ Setting the variable fonts
 #+end_src
 
 #+begin_src emacs-lisp
-(setq +zen-text-scale 1)
-(setq writeroom-width 0.8)
+(after! org
+  (setq +zen-text-scale 1)
+  (setq writeroom-width 1.8)
+  )
 (add-hook 'org-mode-hook 'writeroom-mode)
 #+end_src
 ** Run buffers in org-mode by default:
@@ -118,6 +124,7 @@ smartparens equivalency (default +smartparens under doom config is NOT all you n
 #+begin_src emacs-lisp
 (after! org-download
   (setq org-download-method 'directory)
+  (setq org-download-image-dir (concat org-directory ".attach/" ))
   (setq org-download-link-format "[[file:%s]]\n"
         org-download-abbreviate-filename-function #'file-relative-name)
   (setq org-download-link-format-function #'org-download-link-format-function-default)
