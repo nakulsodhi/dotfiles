@@ -81,6 +81,13 @@
 (after! org
 (advice-remove 'org-download-clipboard 'org-id-get-create))
 
+(defun patch/emacsql-close (connection &rest args)
+  "Prevent calling emacsql-close if connection handle is nil."
+  (when (oref connection handle)
+    t))
+
+(advice-add 'emacsql-close :before-while #'patch/emacsql-close)
+
 (set-frame-parameter nil 'alpha-background 0.6)
 
 (after! ccls
