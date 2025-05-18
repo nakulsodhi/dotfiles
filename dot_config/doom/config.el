@@ -88,6 +88,9 @@
 
 (advice-add 'emacsql-close :before-while #'patch/emacsql-close)
 
+(after! org
+  (setq org-indent-indentation-per-level 4))
+
 (set-frame-parameter nil 'alpha-background 0.6)
 
 (after! ccls

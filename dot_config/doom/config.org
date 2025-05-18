@@ -145,6 +145,11 @@ Fix that annoying sqlitep nil error:
 
 (advice-add 'emacsql-close :before-while #'patch/emacsql-close)
 #+end_src
+** Org-indent
+#+begin_src emacs-lisp
+(after! org
+  (setq org-indent-indentation-per-level 4))
+#+end_src
 * Transparency
 #+begin_src  emacs-lisp
 (set-frame-parameter nil 'alpha-background 0.6)
