@@ -67,6 +67,8 @@ Set the directory
   (setq org-pretty-entities t)
   (setq org-hide-emphasis-markers t)
   (setq org-startup-folded 'content)
+  ;; (setq org-startup-with-inline-images t)
+  (setq org-startup-with-link-previews t)
   (setq org-ellipsis " ")) ;; folding symbol
 #+end_src
 ** Org Writeroom
@@ -77,11 +79,11 @@ Setting the variable fonts
 #+end_src
 
 #+begin_src emacs-lisp
-(after! org
-  (setq +zen-text-scale 1)
-  (setq writeroom-width 1.8)
+(after! writeroom-mode
+  (setq +zen-text-scale 0)
+  (setq writeroom-width 250)
   )
-(add-hook 'org-mode-hook 'writeroom-mode)
+(add-hook 'org-mode-hook '+zen/toggle)
 #+end_src
 ** Run buffers in org-mode by default:
 #+begin_src emacs-lisp
@@ -150,6 +152,12 @@ Fix that annoying sqlitep nil error:
 (after! org
   (setq org-indent-indentation-per-level 4))
 #+end_src
+** Search content folded headings
+#+begin_src emacs-lisp
+(after! org
+  (setq org-fold-core-style 'overlays)
+  (evil-select-search-module 'evil-search-module 'evil-search))
+#+end_src
 * Transparency
 #+begin_src  emacs-lisp
 (set-frame-parameter nil 'alpha-background 0.6)
@@ -180,7 +188,7 @@ lens update is very slow
 * Ultra scroll mode
 #+begin_src emacs-lisp
 
-  (setq scroll-conservatively 3 ; or whatever value you prefer, since v0.4
+(setq scroll-conservatively 3 ; or whatever value you prefer, since v0.4
         scroll-margin 0)        ; important: scroll-margin>0 not yet supported
 (ultra-scroll-mode 1)
 

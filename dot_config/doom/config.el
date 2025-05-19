@@ -37,16 +37,18 @@
   (setq org-pretty-entities t)
   (setq org-hide-emphasis-markers t)
   (setq org-startup-folded 'content)
+  ;; (setq org-startup-with-inline-images t)
+  (setq org-startup-with-link-previews t)
   (setq org-ellipsis " ")) ;; folding symbol
 
 (setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "Vollkorn"))
 
-(after! org
-  (setq +zen-text-scale 1)
-  (setq writeroom-width 1.8)
+(after! writeroom-mode
+  (setq +zen-text-scale 0)
+  (setq writeroom-width 250)
   )
-(add-hook 'org-mode-hook 'writeroom-mode)
+(add-hook 'org-mode-hook '+zen/toggle)
 
 (setq-default major-mode 'org-mode)
 
@@ -90,6 +92,10 @@
 
 (after! org
   (setq org-indent-indentation-per-level 4))
+
+(after! org
+  (setq org-fold-core-style 'overlays)
+  (evil-select-search-module 'evil-search-module 'evil-search))
 
 (set-frame-parameter nil 'alpha-background 0.6)
 
