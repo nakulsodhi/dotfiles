@@ -173,6 +173,7 @@ lens update is very slow
 #+begin_src emacs-lisp
   (setq lsp-lens-enable nil)
 #+end_src
+
 * Projectile
 #+begin_src emacs-lisp
   (setq projectile-cache-file (concat doom-cache-dir "projectile.cache")
@@ -184,12 +185,4 @@ lens update is very slow
 " "TAGS")
         projectile-globally-ignored-file-suffixes '(".elc" ".pyc" ".o")
         projectile-ignored-projects '("~/" "/tmp"))
-#+end_src
-* Ultra scroll mode
-#+begin_src emacs-lisp
-
-(setq scroll-conservatively 3 ; or whatever value you prefer, since v0.4
-        scroll-margin 0)        ; important: scroll-margin>0 not yet supported
-(ultra-scroll-mode 1)
-
 #+end_src

@@ -74,7 +74,4 @@
 (unpin! org)
 
 (package! cdlatex)
-
-(package! ultra-scroll
-  :recipe (:host github :repo "jdtsmith/ultra-scroll"))
-
+(package! dap-cpptools)
