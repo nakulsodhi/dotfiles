@@ -73,5 +73,8 @@
 
 (unpin! org)
 
+(package! org-download :recipe
+  (:host nil :repo "https://github.com/nakulsodhi/org-download"))
+(unpin! org-download)
 (package! cdlatex)
 (package! dap-cpptools)

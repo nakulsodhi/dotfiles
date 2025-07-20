@@ -189,6 +189,8 @@
        ;;irc               ; how neckbeards socialize
        ;;(rss +org)        ; emacs as an RSS reader
 
+       :ui
+       (smooth-scroll +interpolate)
        :config
        literate
        (default +bindings +smartparens))
